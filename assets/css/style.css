@@ -1,0 +1,953 @@
+/* generalna podesavanja*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton|Orbitron|Play|Squada+One|Ubuntu&display=swap');
+:root {
+    --crna: rgba(11, 12, 16, 1);
+    --svetlosiva: rgba(197, 198, 200, 1);
+    --siva: rgba(32, 40, 51, 1);
+    --plava: rgba(70, 162, 159, 1);
+    --svetloplava: rgba(102, 252, 241, 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    background: url(../img/white1.jpg) repeat;
+    /* background-size: cover; */
+    /*  background: -moz-linear-gradient(left, rgb(189, 189, 189) 0%, #FFFFFF 20%, #BDBDBD 80%);
+    background: -webkit-linear-gradient(left, #BDBDBD 0%, #FFFFFF 20%, #BDBDBD 80%);
+    background: linear-gradient(to right, rgb(221, 221, 221) 0%, rgb(247, 245, 245) 50%, rgb(221, 221, 221)); */
+}
+
+a,
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    padding: 0;
+}
+
+.backlight {
+    background-color: rgb(255, 255, 255);
+}
+
+.backdark {
+    background-color: rgb(75, 75, 78);
+}
+
+.myshadow {
+    box-shadow: 0 15px 18px 0 rgba(56, 56, 102, 0.7);
+}
+
+.myshadowsmall {
+    box-shadow: 0 2px 5px 0 rgba(56, 56, 102, 0.4);
+}
+
+
+/* HEADER --------------------------------------------------------------------------------------------------------*/
+
+nav.navbar {
+    margin: 0;
+}
+
+.navbar {
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+    transition: padding 0.2s ease;
+}
+
+.navbar {
+    padding: 0;
+    background: rgba(3, 3, 15, 0.94);
+    transition: all 0.9s;
+}
+
+.navbar.compressed {
+    /* background: rgba; */
+    border-bottom: 2px solid green;
+}
+
+.navbar h6 {
+    font-family: 'Audiowide';
+    font-size: 1.4rem;
+    display: none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    border-bottom: 4px solid rgba(69, 185, 45, 0);
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: green;
+    border-bottom: 4px solid green;
+}
+
+span.navbar-toggler-icon {
+    margin-left: -15px;
+}
+
+#triangle-up {
+    z-index: 10000;
+    width: 0;
+    height: 0;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-bottom: 39px solid white;
+}
+
+#triangle-down {
+    z-index: 10000;
+    width: 0;
+    height: 0;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-top: 39px solid white;
+}
+
+button:focus {
+    outline: none!important;
+}
+
+.navbar-toggler {
+    padding: 0!important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    margin-top: 12px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(37,158,41, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-nav>li>a {
+    padding-right: 0!important;
+    padding-left: 0!important;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+span.navbar-toggler-icon {
+    color: red;
+}
+
+.navbar-brand {
+    padding: 0 !important;
+    margin: 0;
+}
+
+#logo a,
+#logo i {
+    color: white;
+}
+
+.navbar a img {
+    margin-right: 3px;
+    height: 60px;
+}
+
+#naslov {
+    display: block;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    transition: all 0.9s;
+}
+
+#naslov h1 {
+    color: white;
+    font-size: 4rem;
+    transition: all 0.9s;
+}
+
+#naslov p {
+    padding-top: 50px;
+    color: white;
+    font-size: 2rem;
+}
+
+.dropdown-menu {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: left;
+    list-style: none;
+    background-color: rgba(3, 3, 15, 0.94);
+    background-clip: padding-box;
+    border: 1px solid rgba(3, 3, 15, 0.94);
+    border-radius: 1rem 0;
+}
+
+.dropleft .dropdown-menu {
+    margin: 0!important;
+}
+
+.dropdown-menu a {
+    color: #ffffff;
+}
+
+ul.dropdown-menu.dropleft {
+    left: -179%;
+}
+
+.dropdown-menu li a.dropdown-item {
+    padding-top: 7px;
+    border-radius: 3px;
+}
+
+.dropdown-submenu {
+    color: #ffffff !important;
+    position: relative;
+    right: -1px;
+    top: -6px;
+}
+
+.dropdown-submenu a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 6px;
+    top: .8em;
+}
+
+.navbar-nav li:hover>.dropdown-menu {
+    display: block;
+}
+
+.aktivna {
+    border-bottom: 4px solid green!important;
+}
+
+
+/* HERO -----------------------------------------------------------------------------------------------------------*/
+
+#hero {
+    /* background: url(../img/crbi-pcb.png); */
+    background: url(../img/white1.jpg) repeat;
+    width: 100%;
+    margin-top: 65px;
+}
+
+#carouselExampleIndicators {
+    /* background: url(../img/crbi-pcb.png); */
+    height: 40vh;
+    width: 100%;
+}
+
+.carousel-indicators {
+    bottom: -20px;
+}
+
+
+/* #carouselExampleIndicators::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(175, 175, 175, 0.21);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+} */
+
+.carousel-inner>.crousel-item {
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+.carousel-inner {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+div.carousel-item,
+div.carousel-item div>img {
+    height: 100%;
+}
+
+#hero img {
+    height: 100%;
+}
+
+.tekst {
+    width: 100%;
+    position: absolute;
+    top: 17%;
+}
+
+.tekst h2 {
+    margin-left: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: wheat;
+}
+
+.tekst p {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: wheat;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+a.carousel-control-prev,
+a.carousel-control-next {
+    width: 10%;
+}
+
+
+/* MAIN */
+
+.bg-img1 {
+    background-image: url(../img/12.jpg);
+    background-size: cover !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section.bg-img1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 8, 8, 0.80);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+section.bg-img1>* {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-img2 {
+    background-image: url(../img/mx500.png);
+    background-size: cover !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section.bg-img2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 8, 8, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+section.bg-img2>* {
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    position: relative;
+}
+
+.maindiv {
+    position: relative;
+    padding: 15px;
+    margin: auto;
+}
+
+#main {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+#main div.col img {
+    border-radius: 2px;
+    height: 160px;
+    padding: 6px;
+    opacity: 0.67;
+}
+
+#main div.product-card p {
+    font-size: 13px;
+    font-family: 'Roboto';
+    padding: 5px;
+    color: black;
+    text-align: left
+}
+
+#main div.product-card h4 {
+    color: black;
+    font-size: 16px;
+    padding: 5px;
+    font-family: 'Roboto';
+    border-bottom: 1px dotted rgba(180, 180, 180, .6);
+}
+
+.product-card {
+    background-color: white;
+    width: 31.5%;
+    cursor: pointer;
+    border-radius: 2px;
+    margin: 5px;
+    transition: 0.6s;
+    text-align: center;
+}
+
+.maindiv div.backlight {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#menu-ul {
+    cursor: pointer;
+    background-color: rgba(253, 253, 253, .2);
+    width: fit-content;
+    margin-top: 33px;
+    padding-inline-start: 0 !important;
+}
+
+#collapse-1 a,
+#collapse-2 a,
+#collapse-3 a,
+#collapse-4 a {
+    font-size: 13px;
+}
+
+#navbarSupportedContent ul li {
+    padding: 10px 6px;
+    list-style: none;
+}
+
+#main div.main-menu ul li {
+    list-style: none;
+}
+
+#menu-ul span {
+    display: inline-block;
+    content: " ";
+    position: relative;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid green;
+    border-bottom: 5px solid transparent;
+}
+
+#collapse-1 a:hover,
+#collapse-2 a:hover,
+#collapse-3 a:hover,
+#collapse-4 a:hover,
+#menu-ul li:hover {
+    color: green;
+}
+
+#main div.main-menu ul li a {
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 6px;
+}
+
+#main h3 {
+    border-bottom: 3px solid green;
+    font-weight: bold;
+}
+
+
+/* ABOUT ---------------------------------------------------------------------------------------------------------*/
+
+#about {
+    margin-top: 40px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.about-card {
+    display: block;
+    width: 31.5%;
+    cursor: pointer;
+    border-radius: 2px;
+    color: white;
+    margin: 5px;
+    background-color: rgba(32, 40, 51, .65);
+    padding: 15px;
+}
+
+.about-icon {
+    color: rgba(32, 40, 51, .85);
+    background: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: -37px!important;
+}
+
+.about-card h5 {
+    margin: 10px;
+}
+
+.about-icon i {
+    margin: 22% 0;
+}
+
+
+/* PARTNERI -------------------------------------------------------------------------------------------------------*/
+
+div.row.no-gutters.myshadow {
+    position: relative;
+    z-index: 555;
+}
+
+.owl-carousel {
+    margin: auto;
+    width: 100%;
+}
+
+.owl-carousel img {
+    height: 47px;
+}
+
+#partneri p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: rgb(14, 55, 68);
+    font-size: 18px;
+}
+
+#partneri a {
+    color: rgb(14, 55, 68);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Audiowide', cursive;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+
+/* FOOTER -------------------------------------------------------------------------------------------------------*/
+
+#contact {
+    padding: 15px;
+    padding-top: 25px;
+    width: 100%;
+    margin-top: 40px;
+    color: white;
+}
+
+#contact p,
+#contact a,
+#contact address {
+    font-size: 13px;
+    margin: 10px 10px 0 0;
+}
+
+#contact h6 {
+    border-bottom: 2px solid green;
+    margin: 10px 10px 0 0;
+}
+
+#contact h5 {
+    margin-bottom: 10px;
+}
+
+address {
+    margin-bottom: 0!important;
+}
+
+#mapa {
+    padding: 15px 0;
+    z-index: 0;
+    margin-top: 14px
+}
+
+#mapa iframe {
+    box-sizing: border-box;
+    height: 230px;
+    width: 100%;
+    margin: auto;
+    border: 2px solid green;
+}
+
+#donji {
+    box-shadow: 0 0 8px 2px rgba(16, 37, 68, 0.72);
+}
+
+#donji div.row.flex-column {
+    border-top: 2px solid green;
+    height: 125px;
+    background: rgba(10, 17, 27, 1);
+    width: 100%;
+}
+
+div#donji::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 8, 8, 0.95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+footer>*,
+div#donji>* {
+    position: relative;
+    z-index: 1000;
+}
+
+footer img,
+footer p {
+    display: block;
+    margin: auto;
+}
+
+div#donji ul.nav a {
+    color: white;
+    font-size: 13px;
+}
+
+#donji img {
+    margin-top: 30px;
+    width: 180px;
+}
+
+div.cookieinfo {
+    background: rgba(238, 238, 238, .7)!important;
+    width: 29%;
+}
+
+footer div.d-block i {
+    margin-top: 25px;
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+#prava {
+    font-size: 10px;
+    margin-top: 15px;
+}
+
+
+/* Products page ---------------------------------------------------------------------------------------*/
+
+#naslovP {
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+div.offset-md-1.backlight {
+    margin-top: 33px;
+    border-top: 3px solid green;
+}
+
+.product-card-big {
+    margin: 30px 0;
+    border-bottom: 1px dotted gray;
+    border-top: 1px dotted gray;
+    padding: 10px;
+}
+
+.product-card-big h4 {
+    font-family: "Play";
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.product-card-big h6 {
+    margin: 25px 0;
+}
+
+ul {
+    list-style-type: "★";
+}
+
+.product-card-big ul li:before {
+    content: "★";
+    padding-right: 8px;
+}
+
+.product-card-big ul,
+.product-card-small ul {
+    font-weight: bold;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.product-card-big p {
+    margin: 25px 0;
+}
+
+.product-card-big img {
+    width: 400px;
+}
+
+.product-card-small {
+    padding: 20px;
+}
+
+.product-card-small img {
+    margin-top: 10px;
+    width: 150px;
+}
+
+.product-card-small h4 {
+    font-family: "Play";
+    font-weight: bold;
+}
+
+.product-card-small h6 {
+    margin-top: 8px;
+}
+
+.product-card-small p {
+    margin: 10px 0;
+}
+
+.product-card-small div.d-flex {
+    border-bottom: 1px dotted black;
+    margin-bottom: 10px;
+}
+
+.product-card-small ul li:before {
+    content: "★";
+    padding-right: 8px;
+}
+
+.product-card-small.backlight,
+.main-menu ul,
+.product-card-big img {
+    border-radius: 2px;
+    box-shadow: 2px 0 18px 1px rgba(100, 100, 100, .2);
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 3px;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.breadcrumb li {
+    margin: 0 5px 0 0;
+}
+
+p.alert {
+    margin-top: 70px;
+    z-index: 500000000000;
+}
+
+a:focus {
+    -webkit-tap-highlight-color: transparent!important;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+
+/* podesavanja za telefon ---------------------------------------------------------------------------------------*/
+
+
+/* extra small devices*/
+
+@media(min-width: 1200px) {
+    #main div.main-menu ul li a {
+        font-size: 16px!important;
+    }
+}
+
+@media (max-width: 1300px) {
+    #carouselExampleIndicators {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 1025px) {
+    ul#menu-ul {
+        width: 100%;
+    }
+    nav div#logingsistem.row {
+        display: none;
+    }
+    #carouselExampleIndicators {
+        height: 26vh;
+    }
+    #hero {
+        margin-top: 58px;
+        padding: 0;
+    }
+    a img {
+        height: 54px;
+    }
+    #mapa {
+        padding: 0;
+        z-index: 0;
+        margin-top: 14px;
+        margin-bottom: 25px;
+    }
+}
+
+@media ( max-width: 1023px) {
+    .product-card-big div.d-flex,
+    .product-card-small div.d-flex {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar a img {
+        height: 50px;
+    }
+    #main div.main-menu ul li a {
+        font-size: 14px;
+    }
+}
+
+
+/*Small devices (up to 768px) -----------------------------------------------------------------------*/
+
+@media (max-width: 767px) {
+    a {
+        cursor: default;
+    }
+    ul.sub-cat-menu {
+        position: relative;
+        margin: 2px;
+    }
+    .product-card-big img {
+        width: 250px;
+    }
+    .product-card-small h4 {
+        margin-bottom: 10px;
+    }
+    .product-card-big div.d-flex img {
+        height: 200px;
+    }
+    body {
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3 {
+        font-size: 1.35rem;
+    }
+    a img {
+        height: 39px;
+    }
+    #carouselExampleIndicators {
+        height: 22vh;
+    }
+    #hero {
+        margin-top: 43px;
+        padding: 0;
+    }
+    div.col h4 {
+        padding: 0;
+        height: auto;
+    }
+    #main div.col img {
+        width: unset;
+    }
+    #about {
+        padding: 20px;
+    }
+    .about-icon {
+        margin-top: 0;
+    }
+    .about-icon i {
+        margin: 27% 0;
+    }
+    .about-card {
+        margin: 15px 5px;
+    }
+    .about-card:last-of-type {
+        margin-bottom: 0!important;
+    }
+    .owl-carousel img {
+        width: 110px;
+        height: 35px;
+    }
+    div.owl-stage-outer {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    #partneri a {
+        margin: auto;
+        font-size: 24px;
+    }
+    #partneri p {
+        margin-top: 3px;
+    }
+    #mapa {
+        width: 100%;
+        height: 200px;
+    }
+    #main {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .product-card,
+    .about-card {
+        width: 100%;
+    }
+    #menu-ul {
+        width: 100%!important;
+        margin: 10px auto 10px auto;
+    }
+    #naslov {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #naslov h1 {
+        font-size: 2rem;
+    }
+    #naslov p {
+        padding-top: 1.4rem;
+        font-size: 1.3rem;
+    }
+    div.cookieinfo {
+        width: 100%;
+    }
+}
