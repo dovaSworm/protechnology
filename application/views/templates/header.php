@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-    <title><?php echo isset($title) ? $title : '' ; ?></title>
+    <title><?php echo isset($title) ? $title : '' ; ?>Dova</title>
 
 </head>
 
